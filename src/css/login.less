@@ -1,3 +1,90 @@
-p {
-    background: rgb(31, 90, 124);
+html,
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    // 主轴设置为y轴
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    flex: 1;
+    width: 83%;
+    height: 100%;
+    background: url("../img/sign-bg.jpg") no-repeat;
+    background-size: 124%;
+    background-position: -21px -10px;
+    padding: 20px 32px;
+}
+.top {
+    color: #fff;
+    text-align: right;
+}
+h4 {
+    color: #fff;
+    font-size: 26px;
+}
+
+
+
+.inp {
+    margin-top: 15px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    position: relative;
+}
+
+.inp>input {
+    width: 100%;
+    height: 50px;
+    background: rgba(255,255,255,.7);
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+input::-webkit-input-placeholder {
+    color: #fff;
+    text-indent: 2em;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgba(14, 224, 112, 0.5);
+}
+
+.bottom {
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+
+}
+.forget {
+    // text-align: center;
+    margin-right: 70px;
+}
+
+.foot {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
 }

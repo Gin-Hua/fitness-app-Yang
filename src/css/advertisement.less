@@ -1,0 +1,76 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    // 主轴设置为y轴
+    flex-direction: column;
+
+}
+// 头部
+header {
+    width: 100%;
+    height: 44px;
+    background: #f8f8f8;
+    line-height: 44px;
+    text-align: center;
+}
+
+// 主要内容
+main {
+    width: 100%;
+    height: 100%;
+    flex:1;
+    background: url("../img/advertisement-bg.jpg") no-repeat;
+    background-size: 249%;
+    background-position: -281px 0;
+    position: relative;
+}
+main>button {
+    width: 105px;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    border: #ccc;
+    position: absolute;
+    top: 28px;
+    right: 14px;
+}
+
+span {
+    position: absolute;
+    top: 350px;
+    left: 130px;
+    color: #fff;
+}
+
+
+// 动画定义
+@keyframes run {
+    0%{
+    transform: translate(0,0) scale(1.2,1.2);
+    }
+    25%{
+    transform: translate(0,30px) scale(1.5,1.5) ;
+    }
+    50%{
+    transform: translate(0,60px) scale(1.75,1.75);
+    }
+    75%{
+    transform: translate(0,90px) scale(2,2);
+    }
+    100%{
+    transform: translate(0,120px) scale(2.5,2.5);
+    
+    }
+}
+.annimate {
+    animation: run 3s ease-in;
+    animation-fill-mode:forwards ;
+}

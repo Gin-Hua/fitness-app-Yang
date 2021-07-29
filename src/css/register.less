@@ -1,3 +1,97 @@
-p {
-    background: rgb(192, 16, 16);
+html,
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    // 主轴设置为y轴
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    flex: 1;
+    width: 83%;
+    height: 100%;
+    background: url("../img/sign-bg.jpg") no-repeat;
+    background-size: 124%;
+    background-position: -21px -10px;
+    padding: 20px 32px;
+}
+.top {
+    color: #fff;
+    text-align: right;
+}
+h4 {
+    color: #fff;
+    font-size: 26px;
+}
+
+.title {
+    color: #ccc;
+}
+
+.inp {
+    margin-top: 15px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    position: relative;
+}
+.T86 {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    color: #fff;
+}
+.inp>input {
+    width: 100%;
+    height: 50px;
+    background: rgba(255,255,255,.7);
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+input::-webkit-input-placeholder {
+    color: #fff;
+    text-indent: 1em;
+}
+.tel::-webkit-input-placeholder {
+    text-indent: 5em;
+}
+.iden {
+    width: 65% !important;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgba(14, 224, 112, 0.5);
+}
+
+.reg {
+    margin-top: 10px;
+    text-align: right;
+    color: #fff;
+    font-size: 14px;
+
+}
+
+.foot {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
 }

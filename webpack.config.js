@@ -23,7 +23,8 @@ module.exports = {
         // common: './src/js/common.js',
         login: './src/js/login.js',
         home: './src/js/home.js',
-        register: './src/js/register.js'
+        register: './src/js/register.js',
+        advertisement: './src/js/advertisement.js'
     },
     //出口----最终生成的文件的放置位置
     output: {
@@ -108,6 +109,11 @@ module.exports = {
             filename: 'register.html',
             chunks: ['register']
         }),
+        new HtmlWebpackPlugin({
+            template: './src/page/advertisement.html',      //以哪个html文件作为打包的模板
+            filename: 'advertisement.html',
+            chunks: ['advertisement']
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
         }),
@@ -125,7 +131,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'home.html', // 打开的页面
+        openPage: 'advertisement.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }
