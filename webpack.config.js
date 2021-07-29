@@ -20,11 +20,18 @@ module.exports = {
     //入口----程序主模块
     entry: {
         // 公共样式
-        // common: './src/js/common.js',
+        common: './src/js/common.js',
+        dom: './src/js/common/dom.js',
+        http: './src/js/common/http.js',
+
+        // 三方插件库
+        captcha: './src/lib/captcha/captcha-mini.js',
+        // 页面样式
         login: './src/js/login.js',
         home: './src/js/home.js',
         register: './src/js/register.js',
-        advertisement: './src/js/advertisement.js'
+        advertisement: './src/js/advertisement.js',
+
     },
     //出口----最终生成的文件的放置位置
     output: {
@@ -97,22 +104,22 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/login.html',         //以哪个html文件作为打包的模板
             filename: 'login.html',
-            chunks: ['login']
+            chunks: ['login', 'common', 'dom', 'http']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/home.html',      //以哪个html文件作为打包的模板
             filename: 'home.html',
-            chunks: ['home']
+            chunks: ['home', 'common', 'dom', 'http']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/register.html',      //以哪个html文件作为打包的模板
             filename: 'register.html',
-            chunks: ['register']
+            chunks: ['register', 'common', 'dom', 'captcha', 'http']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/advertisement.html',      //以哪个html文件作为打包的模板
             filename: 'advertisement.html',
-            chunks: ['advertisement']
+            chunks: ['advertisement', 'common', 'dom', 'http']
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
@@ -131,7 +138,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'advertisement.html', // 打开的页面
+        openPage: 'login.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }
