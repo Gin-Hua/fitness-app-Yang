@@ -14,7 +14,14 @@ document.ready(function () {
     let pwd = document.querySelector("#pwd");
     let againPwd = document.querySelector("#againPwd");
     let register = document.querySelector("button");
-    let msg = document.querySelector(".msg-text")
+    let msg = document.querySelector(".msg-text");
+    let jumpBtn = document.querySelector(".jump-text");
+
+    // 点击跳转登录
+    jumpBtn.addEventListener("click", function () {
+        console.log(123);
+        location.href = "./login.html"
+    })
 
     // 注册监听事件
     register.addEventListener("click", function () {
@@ -39,6 +46,7 @@ document.ready(function () {
                 return;
             }
 
+            // 注册账号
             // 做ajax请求
             let data = {
                 account: tel.value,

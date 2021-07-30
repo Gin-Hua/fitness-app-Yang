@@ -1,5 +1,5 @@
 
-const BASE_URL = 'http:xxx.com'
+const BASE_URL = 'http://139.9.177.51:8099'
 
 function objToString(data) {
   let str = '';
@@ -10,7 +10,6 @@ function objToString(data) {
   str = str.replace('&', '?');
   return str;
 }
-
 
 
 

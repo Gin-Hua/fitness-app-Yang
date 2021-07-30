@@ -31,6 +31,7 @@ module.exports = {
         home: './src/js/home.js',
         register: './src/js/register.js',
         advertisement: './src/js/advertisement.js',
+        my: './src/js/my.js'
 
     },
     //出口----最终生成的文件的放置位置
@@ -63,7 +64,7 @@ module.exports = {
             },
             // 配置图片loader
             {
-                test: /\.(png|jpg|gif|jpeg)$/, //配置css中的图片打包
+                test: /\.(png|jpg|gif|jpeg|JPG)$/, //配置css中的图片打包
                 loader: 'url-loader',     //只有一个处理的loader的写法  
                 //可以通过url-loader 将图片压缩为 base64编码格式的图片
                 //大图就不压缩  小图可以压缩
@@ -121,6 +122,11 @@ module.exports = {
             filename: 'advertisement.html',
             chunks: ['advertisement', 'common', 'dom', 'http']
         }),
+        new HtmlWebpackPlugin({
+            template: './src/page/my.html',      //以哪个html文件作为打包的模板
+            filename: 'my.html',
+            chunks: ['my', 'common', 'dom', 'my']
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
         }),
@@ -138,7 +144,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'login.html', // 打开的页面
+        openPage: 'my.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }

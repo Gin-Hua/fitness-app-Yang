@@ -20,6 +20,8 @@
 
 .mb16 { margin-bottom: 16px; }
 
+.mb8 {margin-bottom: 8px;}
+
 .ml12 { margin-left: 12px; }
 
 .pd16 { padding: 16px; }
@@ -29,3 +31,6 @@
 /* 字号 */
 .fs12 { font-size: 12px; }
 .fs18 { font-size: 18px; }
+
+/* 加粗 */
+.fwb { font-weight: bold; }
