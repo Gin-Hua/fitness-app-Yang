@@ -11,7 +11,23 @@
 <body>
     <!-- 头部 -->
     <header>
-        123
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../img/index-swiper-bg1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/index-swiper-bg2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../img/index-swiper-bg3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+
+        </div>
     </header>
 
     <!-- 主要内容 -->
@@ -22,12 +38,13 @@
             <div class="rank">
                 <img src="../img/index-card-rank.png" alt="">
                 <span class="rank-Text">今日排名</span>
-                <span class="rank-num">9</span>
+                <span class="rank-num"></span>
             </div>
             <!-- 打卡任务 -->
             <div class="task">
                 <img src="../img/index-card-sum.png" alt="">
-                <span class="task-text">累计打卡23天</span>
+                <span class="task-text">累计打卡
+                    <span class="taskVal"></span> 天</span>
                 <button class="task-btn">今日打卡</button>
             </div>
 
@@ -43,7 +60,7 @@
             <div class="badge">
                 <img src="../img/index-card-badge.png" alt="">
                 <span class="badge-text">累计运动徽章</span>
-                <span class="badge-num">3</span>
+                <span class="badge-num"></span>
                 <span class="badge-num-text">枚</span>
             </div>
 
@@ -62,13 +79,19 @@
     </main>
 
     <!-- 公用页脚 -->
-    <footer id="common-foot">
-        <i class="commonicon iconfont icon-shouye"></i>
-        <i class="commonicon iconfont icon-xindiantu"></i>
-        <i class="commonicon iconfont icon-04"></i>
-        <span>首页</span>
-        <span>运动</span>
-        <span>我的</span>
+    <footer id="common-foot" class=" dpflex">
+        <div class="item ">
+            <i class="commonicon iconfont icon-shouye"></i>
+            <p>首页</p>
+        </div>
+        <div class="item ">
+            <i class="commonicon iconfont icon-xindiantu"></i>
+            <p>运动</p>
+        </div>
+        <div class="item ">
+            <i class="commonicon iconfont icon-04"></i>
+            <p>我的</p>
+        </div>
     </footer>
 
 
