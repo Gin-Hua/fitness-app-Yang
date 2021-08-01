@@ -36,6 +36,40 @@ utils.createToast = function (name, msg) {
 }
 
 
+
+/* 
+*@createFooter 
+*@page  string   传入的页面
+*/
+utils.createFooter = function (page) {
+    let footer = document.createElement("footer");
+    footer.className = "dpflex";
+    footer.id = "common-foot";
+    let html = ` 
+    <a href="./home.html">
+        <div class="${page === "home" ? "item active" : "item"}" >
+            <i class="commonicon iconfont icon-shouye"></i>
+            <p>首页</p>
+        </div >
+    </a >
+    <a href="./sports.html">
+        <div class="${page === "sports" ? "item active" : "item"}"">
+            <i class="commonicon iconfont icon-xindiantu"></i>
+            <p>运动</p>
+        </div>
+    </a>
+    <a href="./my.html">
+        <div class="${page === "my" ? "item active" : "item"}"">
+            <i class="commonicon iconfont icon-04"></i>
+            <p>我的</p>
+        </div>
+    </a>
+    `
+    footer.innerHTML = html;
+    document.body.appendChild(footer)
+}
+
+
 // 挂载
 
 window.utils = utils;

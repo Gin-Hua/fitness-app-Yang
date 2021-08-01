@@ -9,7 +9,10 @@ document.ready(function () {
     let taskValDom = document.querySelector(".taskVal")
     let badgeValDom = document.querySelector(".badge-num")
 
-    let taskBtn = document.querySelector(".task-btn")
+    let taskBtn = document.querySelector(".task-btn");
+
+    // 调用公用底部组件，渲染页面
+    utils.createFooter("home")
 
     // 使用swiper
     var mySwiper = new Swiper('.swiper-container', {

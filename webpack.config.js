@@ -26,17 +26,19 @@ module.exports = {
         utils: './src/js/common/utils.js',
 
         // 三方插件库
-        captcha: './src/lib/captcha/captcha-mini.js',
-        swiper: './src/lib/swiper/swiper-bundle.js',
+        captcha: './src/lib/captcha/captcha-mini.js',       // 验证码
+        swiper: './src/lib/swiper/swiper-bundle.js',        // 轮播图
+        weui: './src/lib/weui/weui.js',         // 组件
         // 页面样式
-        login: './src/js/login.js',
-        home: './src/js/home.js',
-        register: './src/js/register.js',
-        advertisement: './src/js/advertisement.js',
-        my: './src/js/my.js',
-        alterInfo: './src/js/alterInfo.js',
-        course: './src/js/course.js',
-        courseDesc: './src/js/courseDesc.js'
+        login: './src/js/login.js',         // 登录页面
+        home: './src/js/home.js',           // 主页
+        register: './src/js/register.js',           // 注册
+        advertisement: './src/js/advertisement.js',         // 广告页
+        my: './src/js/my.js',               //  我的主页
+        alterInfo: './src/js/alterInfo.js',         // 修改信息
+        course: './src/js/course.js',           // 课程
+        courseDesc: './src/js/courseDesc.js',        // 课程介绍
+        sports: './src/js/sports.js'
 
     },
     //出口----最终生成的文件的放置位置
@@ -115,7 +117,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/home.html',      //以哪个html文件作为打包的模板
             filename: 'home.html',
-            chunks: ['home', 'common', 'dom', 'http', 'swiper']
+            chunks: ['home', 'common', 'dom', 'http', 'swiper', 'utils']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/register.html',      //以哪个html文件作为打包的模板
@@ -130,22 +132,27 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/alterInfo.html',      //以哪个html文件作为打包的模板
             filename: 'alterInfo.html',
-            chunks: ['alterInfo', 'common', 'dom', 'http']
+            chunks: ['alterInfo', 'common', 'dom', 'http', 'weui']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/my.html',      //以哪个html文件作为打包的模板
             filename: 'my.html',
-            chunks: ['my', 'common', 'dom']
+            chunks: ['my', 'common', 'dom', 'utils', 'http']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/course.html',      //以哪个html文件作为打包的模板
             filename: 'course.html',
-            chunks: ['course', 'common', 'dom']
+            chunks: ['course', 'common', 'dom', 'utils']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/courseDesc.html',      //以哪个html文件作为打包的模板
             filename: 'courseDesc.html',
             chunks: ['courseDesc', 'common', 'dom']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/sports.html',      //以哪个html文件作为打包的模板
+            filename: 'sports.html',
+            chunks: ['sports', 'common', 'dom', 'utils']
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
@@ -164,7 +171,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'courseDesc.html', // 打开的页面
+        openPage: 'alterInfo.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }
