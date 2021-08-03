@@ -7,6 +7,8 @@ document.ready(function () {
     const BaseUrl = 'http://139.9.177.51:8099';
 
     // 获取标签
+    let userDom = document.querySelector("header")
+    console.log(userDom);
     let userImgDom = document.querySelector(".user-img>img")
     let userNameDom = document.querySelector(".user-name")
     let userMsgDom = document.querySelector(".user-msg")
@@ -78,8 +80,15 @@ document.ready(function () {
 
     // 图片优化
     // 点击图片间接点击input 
-    userImgDom.addEventListener("click", function () {
+    userImgDom.addEventListener("click", function (e) {
         // click就是模仿用户点击
         inpImg.click();
+        // 组织冒泡事件
+        e.stopPropagation();
+    })
+
+    // 点击用户跳转至信息修改
+    userDom.addEventListener("click", function () {
+        location.href = "./alterInfo.html"
     })
 })

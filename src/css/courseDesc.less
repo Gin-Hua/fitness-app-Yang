@@ -1,9 +1,9 @@
 // 课程介绍页面样式设置
 // 视频
 .videoBox {
+    position: relative;
     width: 100%;
     height: 250px;
-    // background: pink;
     i{
         position: absolute;
         top: 10px;
@@ -12,9 +12,7 @@
         font-size: 40px;
         z-index: 10;
     }
-    video {
-    position: relative;
-        margin-top: -20px;
+    img {
         width: 100%;
         height: 250px;
        
@@ -39,35 +37,37 @@
             color: #101010;
         }
         .run-data {
+            align-items: center;
             position: relative;
             width: 100%;
             height: 40px;
-            p {
-                width: 20%;
-                line-height: 40px;
-                font-size: 20px;
-                text-align: center;
-                span {
-                    font-size: 14px;
+            .cal-box {
+                width: 25%;
+                .cal-num {
+                    line-height: 30px;
+                    font-size: 22px;
                 }
             }
-            p:last-child {
+            .min-box {
+                width: 25%;
+                .min-num {
+                    line-height: 30px;
+                    font-size: 22px;
+                }
+            }
+            .people-num {
+                width: 50%;
+                margin-right: 40px;
+                text-align: right;
+            }
+            i {
                 position: absolute;
-                font-size: 14px;
-                top: 0;
+                top: 11px;
                 right: 0;
-                width: 30%;
-                height: 40px;
-                i {
-                    position: absolute;
-                    top: 2px;
-                    right: 0;
-                    font-size: 20px;
-                    font-weight: bold;
-                }
+                font-size: 20px;
+                font-weight: bold;
             }
-               
-            
+
         }
     }
 }
@@ -82,7 +82,11 @@
         width: 80px;
         height: 80px;
         border-radius: 50%;
-        background: purple;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
     // 用户姓名
     .userName {

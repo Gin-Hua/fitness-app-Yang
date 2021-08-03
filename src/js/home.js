@@ -3,6 +3,9 @@ console.log("home");
 console.log(Swiper);
 
 document.ready(function () {
+    if (!localStorage.getItem("user")) {
+        location.href = "./login.html"
+    }
 
     // 获取标签
     let rankValDom = document.querySelector(".rank-num")

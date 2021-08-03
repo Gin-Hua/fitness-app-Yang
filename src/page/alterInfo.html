@@ -11,7 +11,7 @@
 <body>
     <!-- 头部 -->
     <header>
-        <i class="iconfont icon-changyongicon-1"></i>
+        <i class="iconfont icon-changyongicon-1" id="back"></i>
         个人资料
     </header>
     <!-- 主体 -->
@@ -22,7 +22,7 @@
                 <label class="weui-label">昵称</label>
             </div>
             <div class="weui-cell__bd">
-                <input id="js_input" class="weui-input" placeholder="填写本人微信号的昵称">
+                <input id="js_input" class="weui-input nickname" placeholder="填写本人微信号的昵称">
             </div>
         </div>
         <!-- 性别 -->
@@ -36,14 +36,26 @@
             <div class="weui-cell__ft" id="birthdayVal">1990-01-01 </div>
         </div>
         <!-- 省份 -->
-        <div class="weui-cell weui-cell_active weui-cell_access" id="showDatePicker">
-            <div class="weui-cell__bd">省份</div>
-            <div class="weui-cell__ft">重庆 </div>
+        <div class="weui-cell weui-cell_active weui-cell_access" id="province">
+            <div class="weui-cell__bd">请选择省份</div>
+            <div class="weui-cell__ft" id="proVal">四川 </div>
         </div>
         <!-- 城市 -->
-        <div class="weui-cell weui-cell_active weui-cell_access" id="showDatePicker">
-            <div class="weui-cell__bd">城市</div>
-            <div class="weui-cell__ft">渝北 </div>
+        <div class="weui-cell weui-cell_active weui-cell_access" id="city">
+            <div class="weui-cell__bd">请选择城市</div>
+            <div class="weui-cell__ft" id="cityVal">成都 </div>
+        </div>
+        <!-- 个性介绍 -->
+        <div class="weui-cells__group weui-cells__group_form">
+            <div class="weui-cells__title">问题描述</div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell ">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请描述你所发生的问题" rows="3"></textarea>
+                        <div class="weui-textarea-counter"><span>0</span>/200</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- 页脚 -->

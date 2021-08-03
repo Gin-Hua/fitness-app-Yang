@@ -70,6 +70,30 @@ utils.createFooter = function (page) {
 }
 
 
+/* 
+*@strGetObj 
+*@str  string   传入的字符串
+* return obj
+*/
+utils.strGetObj = function (str) {
+    // 设置空对象
+    let obj = {};
+    // 截取第一个问号
+    let getStr = str.substring(1);
+    // 以&分割成数组
+    let arr = getStr.split("&")
+    // 遍历循环
+    arr.forEach(function (item, index) {
+        let newStr = item.split("=")
+        console.log(newStr);
+        // 拼接每一个对象
+        obj[newStr[0]] = newStr[1];
+    })
+    return obj
+}
+
+
+
 // 挂载
 
 window.utils = utils;

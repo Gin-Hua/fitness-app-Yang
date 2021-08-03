@@ -132,7 +132,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/alterInfo.html',      //以哪个html文件作为打包的模板
             filename: 'alterInfo.html',
-            chunks: ['alterInfo', 'common', 'dom', 'http', 'weui']
+            chunks: ['alterInfo', 'common', 'dom', 'http', 'weui', 'utils']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/my.html',      //以哪个html文件作为打包的模板
@@ -147,12 +147,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/page/courseDesc.html',      //以哪个html文件作为打包的模板
             filename: 'courseDesc.html',
-            chunks: ['courseDesc', 'common', 'dom']
+            chunks: ['courseDesc', 'common', 'dom', 'http', 'utils']
         }),
         new HtmlWebpackPlugin({
             template: './src/page/sports.html',      //以哪个html文件作为打包的模板
             filename: 'sports.html',
-            chunks: ['sports', 'common', 'dom', 'utils']
+            chunks: ['sports', 'common', 'dom', 'utils', 'http']
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
@@ -171,7 +171,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'alterInfo.html', // 打开的页面
+        openPage: 'sports.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }
