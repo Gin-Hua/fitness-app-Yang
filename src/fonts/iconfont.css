@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2707402 */
-  src: url('iconfont.woff2?t=1627732234557') format('woff2'),
-       url('iconfont.woff?t=1627732234557') format('woff'),
-       url('iconfont.ttf?t=1627732234557') format('truetype');
+  src: url('iconfont.woff2?t=1628066600588') format('woff2'),
+       url('iconfont.woff?t=1628066600588') format('woff'),
+       url('iconfont.ttf?t=1628066600588') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,46 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yaling1:before {
+  content: "\e618";
+}
+
+.icon-yaling:before {
+  content: "\e616";
+}
+
+.icon-caidan:before {
+  content: "\e62f";
+}
+
+.icon-sanjiaoxing:before {
+  content: "\e620";
+}
+
+.icon-power:before {
+  content: "\e615";
+}
+
+.icon-bofang:before {
+  content: "\e731";
+}
+
+.icon-xueyuan-shangyijie:before {
+  content: "\e6ca";
+}
+
+.icon-xueyuan-xiayijie:before {
+  content: "\e6cb";
+}
+
+.icon-bofang1:before {
+  content: "\e610";
+}
+
+.icon-ico_zanting_xuanzhong:before {
+  content: "\e613";
 }
 
 .icon-changyongicon-1:before {

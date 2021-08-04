@@ -11,24 +11,43 @@ document.ready(function () {
     let userName = document.querySelector(".userName>.name");
     let userDesc = document.querySelector(".userName>.desc");
     let userImg = document.querySelector(".userImg>img");
+    let backBtn = document.querySelector(".back")
+    let playBtn = document.querySelector(".icon-bofang");
+    let startBtn = document.querySelector(".start-btn")
 
     let baseUrl = "http://139.9.177.51:8099";
     let user = JSON.parse(localStorage.getItem("user"))
-    console.log(user);
+    // console.log(user);
     // 先拿到id值
     let obj = utils.strGetObj(location.search);
 
+    // 点击播放按钮进行播放
+    playBtn.addEventListener("click", function () {
+        console.log(1111111111111111);
+        location.href = "./player.html"
+    })
+
+    // 点击返回按钮进行返回
+    backBtn.addEventListener("click", function () {
+        location.href = "./sports.html"
+    })
+
     // 发送课程训练详情请求，渲染页面
     $http.get('/sports/courseDetail', { id: obj.id }, function (res) {
+        let info = res.data;
         console.log(res);
-        let data = res.data;
-        console.log(data);
-        imgDom.src = baseUrl + data.imgurl;
-        imgTitle.textContent = data.name;
-        calVal.textContent = data.calorie;
-        minVal.textContent = data.time;
-        peopleVal.textContent = `${data.peoplenum}人练过`
-        descVal.textContent = data.desc;
+        console.log(info);
+        imgDom.src = baseUrl + info.imgurl;
+        imgTitle.textContent = info.name;
+        calVal.textContent = info.calorie;
+        minVal.textContent = info.time;
+        peopleVal.textContent = `${info.peoplenum}人练过`
+        descVal.textContent = info.desc;
+
+        console.log(111111111111111111111111111111111);
+        console.log(res.data.fragments);
+        // 将课程列表存入本地存储
+        localStorage.setItem("courseList", JSON.stringify(res.data.fragments))
     });
 
     // 获取本地userId, 发生请求, 渲染页面姓名和介绍
@@ -37,6 +56,9 @@ document.ready(function () {
         userName.textContent = res.data.nickname;
         userDesc.textContent = res.data.sign;
         userImg.textContent = res.data.imgurl;
+    })
+    startBtn.addEventListener("click", function () {
+        location.href = "./player.html"
     })
 
 })

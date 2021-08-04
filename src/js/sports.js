@@ -31,7 +31,6 @@ document.ready(function () {
         </a>
         `
         document.querySelector(".new").innerHTML = newHtml;
-
         console.log(courseList);
         let html = ""
         courseList.forEach(function (item, index) {
@@ -47,9 +46,6 @@ document.ready(function () {
         })
         console.log(html);
         document.querySelector(".other-course").innerHTML = html;
-
-
-
     })
 
 })

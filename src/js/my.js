@@ -18,6 +18,10 @@ document.ready(function () {
 
     let inpImg = document.querySelector(".inpImg")
 
+    let dataBtn = document.querySelector("#dataBtn");
+
+    let exitBtn = document.querySelector(".exit-btn")
+
     // 获取本地数据
     let user = JSON.parse(localStorage.getItem("user"))
     console.log(user);
@@ -90,5 +94,18 @@ document.ready(function () {
     // 点击用户跳转至信息修改
     userDom.addEventListener("click", function () {
         location.href = "./alterInfo.html"
+    })
+
+    console.log(dataBtn);
+    dataBtn.addEventListener("click", function () {
+        console.log(111111111);
+        location.href = "./sportsInfo.html"
+    })
+
+
+
+    exitBtn.addEventListener("click", function () {
+        localStorage.clear();
+        location.href = "./login.html"
     })
 })

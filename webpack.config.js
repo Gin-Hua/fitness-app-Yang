@@ -38,8 +38,9 @@ module.exports = {
         alterInfo: './src/js/alterInfo.js',         // 修改信息
         course: './src/js/course.js',           // 课程
         courseDesc: './src/js/courseDesc.js',        // 课程介绍
-        sports: './src/js/sports.js'
-
+        sports: './src/js/sports.js',
+        player: './src/js/player.js',
+        sportsInfo: './src/js/sportsInfo.js'
     },
     //出口----最终生成的文件的放置位置
     output: {
@@ -154,6 +155,16 @@ module.exports = {
             filename: 'sports.html',
             chunks: ['sports', 'common', 'dom', 'utils', 'http']
         }),
+        new HtmlWebpackPlugin({
+            template: './src/page/player.html',      //以哪个html文件作为打包的模板
+            filename: 'player.html',
+            chunks: ['player', 'common', 'dom']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page/sportsInfo.html',      //以哪个html文件作为打包的模板
+            filename: 'sportsInfo.html',
+            chunks: ['sportsInfo', 'common', 'dom', 'utils']
+        }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css' // 输出到css文件夹里
         }),
@@ -171,7 +182,7 @@ module.exports = {
         port: 8080,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'sports.html', // 打开的页面
+        openPage: 'advertisement.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 }
